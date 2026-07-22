@@ -2,53 +2,112 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f7f4;
-  color: #2d3748;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fdf2e9 0%, #eef7f8 100%);
+  color: #243b53;
 }
 
-
-header {
+.hero {
   text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #1b47a6;
+  padding: 28px 20px 24px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%);
   color: white;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
 }
 
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
 
 h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
+.hero p:last-child {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: 260px 260px 260px;
-  justify-content: space-evenly;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 20px;
 }
 
-
-section {
-  background-color: white;
-  padding: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+.story-card {
+  grid-column: span 5;
+  background: #fff7ed;
 }
 
+.ingredients-card {
+  grid-column: span 4;
+  background: #ecfeff;
+}
+
+.steps-card {
+  grid-column: span 3;
+  background: #fefce8;
+}
+
+section {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
 
 h2 {
   margin-top: 0;
-  color: #e66a3b;
+  font-size: 1.2rem;
 }
 
+.story-card h2 {
+  color: #c2410c;
+}
 
-ul, ol {
-  padding-left: 20px;
+.ingredients-card h2 {
+  color: #0369a1;
+}
+
+.steps-card h2 {
+  color: #a16207;
+}
+
+ul,
+ol {
+  padding-left: 22px;
+  line-height: 1.7;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 800px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-card,
+  .ingredients-card,
+  .steps-card {
+    grid-column: span 1;
+  }
 }
 
