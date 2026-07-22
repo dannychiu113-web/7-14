@@ -4,110 +4,81 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #fdf2e9 0%, #eef7f8 100%);
-  color: #243b53;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3eb;
+  color: #2f3e46;
 }
 
 .hero {
   text-align: center;
-  padding: 28px 20px 24px;
-  margin-bottom: 24px;
-  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #8b5e3c;
   color: white;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
-}
-
-.eyebrow {
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  font-size: 0.75rem;
-  opacity: 0.9;
 }
 
 h1 {
   margin: 0;
-  font-size: 2.3rem;
-}
-
-.hero p:last-child {
-  margin: 8px 0 0;
-  font-size: 1rem;
-  opacity: 0.95;
+  font-size: 2rem;
 }
 
 main {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px 40px;
+  padding: 0 20px 30px;
 }
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: 300px 250px;
+  grid-template-areas:
+    "story ingredients"
+    "steps steps";
   gap: 20px;
 }
 
 .story-card {
-  grid-column: span 5;
-  background: #fff7ed;
+  grid-area: story;
+  background-color: #fffdfa;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #d8c7b0;
 }
 
 .ingredients-card {
-  grid-column: span 4;
-  background: #ecfeff;
+  grid-area: ingredients;
+  background-color: #fdf2e8;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #d8c7b0;
 }
 
 .steps-card {
-  grid-column: span 3;
-  background: #fefce8;
-}
-
-section {
-  padding: 18px;
-  border-radius: 16px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  grid-area: steps;
+  background-color: #f7efe5;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #d8c7b0;
 }
 
 h2 {
   margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.story-card h2 {
-  color: #c2410c;
-}
-
-.ingredients-card h2 {
-  color: #0369a1;
-}
-
-.steps-card h2 {
-  color: #a16207;
+  color: #6b3f1d;
 }
 
 ul,
 ol {
-  padding-left: 22px;
-  line-height: 1.7;
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
-li {
-  margin-bottom: 6px;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .recipe-grid {
     grid-template-columns: 1fr;
-  }
-
-  .story-card,
-  .ingredients-card,
-  .steps-card {
-    grid-column: span 1;
+    grid-template-areas:
+      "story"
+      "ingredients"
+      "steps";
   }
 }
 
