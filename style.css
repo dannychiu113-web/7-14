@@ -9,10 +9,9 @@ body {
   color: #2f3e46;
 }
 
-.hero {
+header {
   text-align: center;
   padding: 20px;
-  margin-bottom: 20px;
   background-color: #8b5e3c;
   color: white;
 }
@@ -23,40 +22,15 @@ h1 {
 }
 
 main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px 20px;
 }
 
-.recipe-grid {
-  display: grid;
-  grid-template-columns: 300px 250px;
-  grid-template-areas:
-    "story ingredients"
-    "steps steps";
-  gap: 20px;
-}
-
-.story-card {
-  grid-area: story;
+section {
   background-color: #fffdfa;
   padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #d8c7b0;
-}
-
-.ingredients-card {
-  grid-area: ingredients;
-  background-color: #fdf2e8;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #d8c7b0;
-}
-
-.steps-card {
-  grid-area: steps;
-  background-color: #f7efe5;
-  padding: 16px;
+  margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #d8c7b0;
 }
@@ -70,15 +44,5 @@ ul,
 ol {
   padding-left: 20px;
   line-height: 1.6;
-}
-
-@media (max-width: 700px) {
-  .recipe-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "story"
-      "ingredients"
-      "steps";
-  }
 }
 
