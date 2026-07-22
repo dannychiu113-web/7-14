@@ -5,15 +5,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f7f3eb;
-  color: #2f3e46;
+  background-color: #fdf6ee;
+  color: #4a3428;
 }
 
 header {
   text-align: center;
   padding: 20px;
-  background-color: #8b5e3c;
-  color: white;
+  background-color: #b85c38;
+  color: #fffaf3;
 }
 
 h1 {
@@ -28,16 +28,16 @@ main {
 }
 
 section {
-  background-color: #fffdfa;
+  background-color: #fff8f0;
   padding: 16px;
   margin-bottom: 20px;
   border-radius: 8px;
-  border: 1px solid #d8c7b0;
+  border: 1px solid #e4b78d;
 }
 
 h2 {
   margin-top: 0;
-  color: #6b3f1d;
+  color: #8a3d1f;
 }
 
 ul,
