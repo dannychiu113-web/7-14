@@ -21,15 +21,11 @@ h1 {
   font-size: 2rem;
 }
 
-main {
+.section {
   max-width: 800px;
   margin: 20px auto;
-  padding: 0 20px 20px;
-}
-
-.section {
-  background-color: #fff8f0;
   padding: 16px;
+  background-color: #fff8f0;
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #e4b78d;
@@ -45,4 +41,3 @@ ol {
   padding-left: 20px;
   line-height: 1.6;
 }
-
